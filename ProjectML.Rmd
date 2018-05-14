@@ -3,9 +3,9 @@ title: "Weight Lifting Exercise Machine Learning Project"
 author: "Javier A Diaz"
 date: "3 de mayo de 2018"
 output:
+  pdf_document: default
   html_document: default
   word_document: default
-  pdf_document: default
 ---
 ## Problem
 The goal of the project is to predict the manner in which 6 participants did the exercise of weight lifting (EWL). They perform the EWL correctly or incorrectly in 5 ways. The data is obtained from  accelerometers on the belt, forearm, arm, and dumbbell, x, y and z axes and  3 Euclidean coordinates for each accelerometer.
@@ -37,7 +37,7 @@ Model rf is selected
 Using the fit with model modFit2 and the Dtest data the prediction for 20 sample is in the predrf file with results shown at the end of the script for model with methods rf and qla
 
 
-```{r setup}
+```{r include=TRUE}
 
 library(e1071)
 library(lattice)
@@ -99,25 +99,25 @@ modFit4<-train(classe~.,
 
 ```
 ## MODEL1 lda
-```{r}
+```{r include=TRUE}
 modFit1$results
 
 ```
 ## Model2 rf
-```{r car}
+```{r include=TRUE}
 print(modFit2$finalModel)
 modFit2$results #Selected model with mtry=2
 print(modFit2$times$'everything') # Time duration
 
 ```
-```{r cars}
+```{r include=TRUE}
 predrf<-predict(modFit2,Dtest)
 predrf
 ```
 
 ## Model 3 qla
 
-```{r cars1}
+```{r cars1 include=TRUE}
  
 modFit3$results
 print(modFit3$times$'everything')
@@ -125,7 +125,7 @@ predQla<-predict(modFit3,Dtest)
 predQla
 ```
 ## Model 4 rpart
-```{r cars3}
+```{r cars3 include=TRUE}
 modFit4$results
 ```
 ```
