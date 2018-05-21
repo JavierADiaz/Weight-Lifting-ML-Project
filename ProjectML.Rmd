@@ -117,7 +117,7 @@ predrf
 
 ## Model 3 qla
 
-```{r cars1 include=TRUE}
+```{r include=TRUE}
  
 modFit3$results
 print(modFit3$times$'everything')
@@ -125,7 +125,7 @@ predQla<-predict(modFit3,Dtest)
 predQla
 ```
 ## Model 4 rpart
-```{r cars3 include=TRUE}
+```{r cars3, include=TRUE}
 modFit4$results
 ```
 ```
